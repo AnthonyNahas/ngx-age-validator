@@ -18,6 +18,12 @@
     },
     {
       "path": "./tsconfig.server.json"
+    },
+    {
+      "path": "./projects/ngx-age-validator/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-age-validator/tsconfig.spec.json"
     }
 ]
 }
