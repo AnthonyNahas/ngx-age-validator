@@ -1,27 +1,209 @@
-# NgxAgeValidator
+<p align="center">
+  <img alt="angular-material-extensions's logo"
+   height="256px" width="256px" style="text-align: center;" 
+   src="https://cdn.jsdelivr.net/gh/angular-material-extensions/select-country@master/assets/angular-material-extensions-logo.svg">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+# ngx-age-validator - Angular custom validator to validate a given age using momentjs
 
-## Development server
+[![npm version](https://badge.fury.io/js/ngx-auth-firebaseui.svg)](https://badge.fury.io/js/ngx-age-validator)
+[![demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://ngx-age-validator.firebaseapp.com)
+[![docs: typedoc](https://img.shields.io/badge/docs-typedoc-4D0080.svg)](https://ngx-age-validator.firebaseapp.com/doc/index.html)
+[![codecov](https://codecov.io/gh/anthonynahas/ngx-age-validator/branch/master/graph/badge.svg)](https://codecov.io/gh/anthonynahas/ngx-age-validator)
+[![CircleCI branch](https://img.shields.io/circleci/project/github/AnthonyNahas/ngx-age-validator/master.svg?label=circleci)](https://circleci.com/gh/AnthonyNahas/ngx-age-validator)
+[![Build Status](https://travis-ci.org/AnthonyNahas/ngx-age-validator.svg?branch=master)](https://travis-ci.org/AnthonyNahas/ngx-age-validator)
+[![Join the chat at https://gitter.im/ngx-age-validator/Lobby](https://badges.gitter.im/ngx-age-validator/Lobby.svg)](https://gitter.im/ngx-age-validator/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![dependency Status](https://david-dm.org/anthonynahas/ngx-age-validator/status.svg)](https://david-dm.org/anthonynahas/ngx-age-validator)
+[![devDependency Status](https://david-dm.org/anthonynahas/ngx-age-validator/dev-status.svg?branch=master)](https://david-dm.org/anthonynahas/ngx-age-validator#info=devDependencies)
+[![npm](https://img.shields.io/npm/dt/ngx-age-validator.svg?style=flat-square)](https://www.npmjs.com/package/ngx-age-validator)
+[![Greenkeeper badge](https://badges.greenkeeper.io/AnthonyNahas/ngx-age-validator.svg)](https://greenkeeper.io/)
+[![license](https://img.shields.io/github/license/anthonynahas/ngx-age-validator.svg?style=flat-square)](https://github.com/AnthonyNahas/ngx-age-validator/blob/master/LICENSE)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### We assume the following example: minimum age: 18 years old - maximum age 40 years old
 
-## Code scaffolding
+<p align="center">
+  <img alt="@angular-material-extensions/select-country demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/angular-material-extensions/select-country/HEAD/assets/v0.2.0/select-country.gif">
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<p align="center">
+  <img alt="@angular-material-extensions/select-country demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/angular-material-extensions/select-country/HEAD/assets/v0.2.0/select-country.png">
+</p>
 
-## Build
+## Built by and for developers :heart:
+Do you have any question or suggestion ? Please do not hesitate to contact us!
+Alternatively, provide a PR | open an appropriate issue [here](https://github.com/angular-material-extensions/select-country/issues)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+If you like this project, support [angular-material-extensions](https://github.com/angular-material-extensions) 
+by starring :star: and sharing it :loudspeaker:
 
-## Running unit tests
+## Table of Contents
+- [Demo](#demo)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Run Demo App Locally](#run-demo-app-locally)
+- [Other Angular Libraries](#other-angular-libraries)
+- [Support](#support)
+- [License](#license)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<a name="demo"/>
 
-## Running end-to-end tests
+## [Demo](https://anthonynahas.github.io/ngx-age-validator)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Library's validator
+
+- `NgxAgeValidator` used to validate the age for a given date 
+
+
+---
+
+<a name="dependencies"/>
+
+## Dependencies
+* [Angular](https://angular.io) developed and tested with `10.x`
+
+---
+
+<a name="installation"/>
+
+##  Installation
+  
+
+```shell
+npm i -s ngx-age-validator
+```
+
+
+
+
+
+
+<a name="api"/>
+
+## API
+
+#### Errors
+
+`tooJung` if the `min` argument > as the difference between the given date and today
+`tooOld` if the `min` argument < as the difference between the given date and today
+
+
+
+<a name="usage"/>
+
+## Usage
+
+
+#### Use the library with reactive forms 
+
+
+
+```html
+<mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" [formControl]="ageFormControl">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error>Error</mat-error>
+      <mat-error *ngIf="ageFormControl.hasError('tooJung')">You are too jung!</mat-error>
+      <mat-error *ngIf="ageFormControl.hasError('tooOld')">You are too old!</mat-error>
+</mat-form-field>
+```
+
+
+
+```typescript
+import {Component, OnInit} from '@angular/core';
+import {FormControl, ValidationErrors} from "@angular/forms";
+import {NgxAgeValidator} from "ngx-age-validator";
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+
+  title = 'ngx-age-validator-demo';
+
+  ageFormControl = new FormControl();
+
+  ngOnInit(): void {
+    this.ageFormControl = new FormControl(null, [NgxAgeValidator(18, 40)])
+
+    this.ageFormControl.valueChanges.subscribe(() => {
+
+      const controlErrors: ValidationErrors | null = this.ageFormControl.errors;
+      if (controlErrors != null) {
+        Object.keys(controlErrors).forEach(keyError => {
+          console.log(' keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
+        });
+      }
+
+    })
+  }
+
+}
+
+```
+
+
+
+<a name="run-demo-app-locally"/>
+
+###  Run Demo App Locally
+
+
+Build the library
+
+```bash
+$ npm run build:lib
+```
+
+Serve the demo app
+
+```bash
+$ npm start
+```
+
+
+
+## Other Angular Libraries
+- [ngx-auth-firebaseui](https://github.com/AnthonyNahas/ngx-auth-firebaseui)
+- [ngx-linkifyjs](https://github.com/AnthonyNahas/ngx-linkifyjs)
+- [@angular-material-extensions/password-strength](https://github.com/angular-material-extensions/password-strength)
+- [@angular-material-extensions/google-maps-autocomplete](https://github.com/angular-material-extensions/google-maps-autocomplete)
+- [@angular-material-extensions/link-preview](https://github.com/angular-material-extensions/link-preview)
+- [@angular-material-extensions/select-country](https://github.com/angular-material-extensions/select-country)
+- [@angular-material-extensions/fab-menu](https://github.com/angular-material-extensions/fab-menu)
+- [@angular-material-extensions/pages](https://github.com/angular-material-extensions/pages)
+- [@angular-material-extensions/contacts](https://github.com/angular-material-extensions/contacts)
+---
+
+<a name="support"/>
+
+## Support
++ Drop an email to: [Anthony Nahas](mailto:anthony.na@hotmail.de)
++ or open an appropriate [issue](https://github.com/angular-material-extensions/select-country/issues)
++ let us chat on [Gitter](https://gitter.im/angular-material-extensions/Lobby)
+ 
+ Built by and for developers :heart: we will help you :punch:
+
+---
+
+![jetbrains logo](https://raw.githubusercontent.com/angular-material-extensions/select-country/HEAD/assets/jetbrains-variant-4_logos/jetbrains-variant-4.png)
+
+This project is supported by [jetbrains](https://www.jetbrains.com/) with 1 ALL PRODUCTS PACK OS LICENSE incl. [webstorm](https://www.jetbrains.com/webstorm)
+
+---
+
+<a name="license"/>
+
+## License
+
+Copyright (c) 2020 [Anthony Nahas](https://github.com/AnthonyNahas). Licensed under the MIT License (MIT)
+
