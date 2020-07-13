@@ -1,12 +1,10 @@
-import { NgModule } from '@angular/core';
-import { NgxAgeValidatorComponent } from './ngx-age-validator.component';
-
+import {NgModule} from '@angular/core';
 
 
 @NgModule({
-  declarations: [NgxAgeValidatorComponent],
-  imports: [
-  ],
-  exports: [NgxAgeValidatorComponent]
+  declarations: [],
+  imports: [],
+  exports: []
 })
-export class NgxAgeValidatorModule { }
+export class NgxAgeValidatorModule {
+}
