@@ -1,5 +1,5 @@
 {
-  "name": "ngx-age-validator",
+  "name": "ngx-age-validator-demo",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,11 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run ngx-age-validator:serve-ssr",
-    "serve:ssr": "node dist/ngx-age-validator/server/main.js",
-    "build:ssr": "ng build --prod && ng run ngx-age-validator:server:production",
-    "serve:prerender": "cd dist/ngx-age-validator/browser && http-server",
-    "prerender": "ng run ngx-age-validator:prerender"
+    "dev:ssr": "ng run ngx-age-validator-demo:serve-ssr",
+    "serve:ssr": "node dist/ngx-age-validator-demo/server/main.js",
+    "build:ssr": "ng build --prod && ng run ngx-age-validator-demo:server:production",
+    "serve:prerender": "cd dist/ngx-age-validator-demo/browser && http-server",
+    "prerender": "ng run ngx-age-validator-demo:prerender"
   },
   "private": true,
   "dependencies": {
