@@ -23,13 +23,9 @@
 
 <p align="center">
   <img alt="@angular-material-extensions/select-country demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/angular-material-extensions/select-country/HEAD/assets/v0.2.0/select-country.gif">
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-age-validator/HEAD/assets/v1/ex1.gif">
 </p>
 
-<p align="center">
-  <img alt="@angular-material-extensions/select-country demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/angular-material-extensions/select-country/HEAD/assets/v0.2.0/select-country.png">
-</p>
 
 ## Built by and for developers :heart:
 Do you have any question or suggestion ? Please do not hesitate to contact us!
@@ -76,10 +72,6 @@ by starring :star: and sharing it :loudspeaker:
 ```shell
 npm i -s ngx-age-validator
 ```
-
-
-
-
 
 
 <a name="api"/>
@@ -151,7 +143,16 @@ export class AppComponent implements OnInit {
 
 ```
 
+<p align="center">
+  <img alt="@angular-material-extensions/select-country demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-age-validator/HEAD/assets/v1/tooJung.png">
+</p>
 
+
+<p align="center">
+  <img alt="@angular-material-extensions/select-country demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-age-validator/HEAD/assets/v1/tooOld.png">
+</p>
 
 <a name="run-demo-app-locally"/>
 
