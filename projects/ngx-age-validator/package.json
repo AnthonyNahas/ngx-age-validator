@@ -51,5 +51,35 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=10.13"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": true,
+      "publishPath": "../../dist/ngx-age-validator"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "../../CHANGELOG.md"
+      }
+    },
+    "hooks": {
+      "before:init": [
+        "npm run clean"
+      ],
+      "after:bump": "echo \"building lib v${version}... \" && npm run build",
+      "before:git:release": "echo \"Updating CHANGELOG.md for v${version} \" && git commit -m \"Updating CHANGELOG.md for v${version} \" ../../../CHANGELOG.md",
+      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.",
+      "before:npm": "echo building the library..."
+    }
   }
 }
