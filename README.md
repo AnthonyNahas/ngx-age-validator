@@ -6,11 +6,9 @@
 
 # ngx-age-validator - Angular custom validator to validate a given age using momentjs
 
-[![npm version](https://badge.fury.io/js/ngx-auth-firebaseui.svg)](https://badge.fury.io/js/ngx-age-validator)
-[![demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://ngx-age-validator.firebaseapp.com)
-[![docs: typedoc](https://img.shields.io/badge/docs-typedoc-4D0080.svg)](https://ngx-age-validator.firebaseapp.com/doc/index.html)
-[![codecov](https://codecov.io/gh/anthonynahas/ngx-age-validator/branch/master/graph/badge.svg)](https://codecov.io/gh/anthonynahas/ngx-age-validator)
-[![CircleCI branch](https://img.shields.io/circleci/project/github/AnthonyNahas/ngx-age-validator/master.svg?label=circleci)](https://circleci.com/gh/AnthonyNahas/ngx-age-validator)
+[![npm version](https://badge.fury.io/js//ngx-age-validator.svg)](https://badge.fury.io/js/ngx-age-validator)
+[![demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://anthonynahas.github.io/ngx-age-validator)
+[![docs: typedoc](https://img.shields.io/badge/docs-typedoc-4D0080.svg)]https://anthonynahas.github.io/ngx-age-validator/doc/index.html)
 [![Build Status](https://travis-ci.org/AnthonyNahas/ngx-age-validator.svg?branch=master)](https://travis-ci.org/AnthonyNahas/ngx-age-validator)
 [![Join the chat at https://gitter.im/ngx-age-validator/Lobby](https://badges.gitter.im/ngx-age-validator/Lobby.svg)](https://gitter.im/ngx-age-validator/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![dependency Status](https://david-dm.org/anthonynahas/ngx-age-validator/status.svg)](https://david-dm.org/anthonynahas/ngx-age-validator)
