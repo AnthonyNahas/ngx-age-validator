@@ -1,7 +1,7 @@
 {
   "name": "ngx-age-validator",
   "description": "angular custom validator to validate a given age using momentjs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://anthonynahas.github.io/ngx-age-validator",
   "author": {
     "name": "anthonynahas",
@@ -77,7 +77,7 @@
         "npm run clean"
       ],
       "after:bump": "echo \"building lib v${version}... \" && npm run build",
-      "before:git:release": "echo \"Updating CHANGELOG.md for v${version} \" && git commit -m \"Updating CHANGELOG.md for v${version} \" ../../../CHANGELOG.md",
+      "before:git:release": "echo \"Updating CHANGELOG.md for v${version} \" && git commit -m \"Updating CHANGELOG.md for v${version} \" ../../CHANGELOG.md",
       "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.",
       "before:npm": "echo building the library..."
     }
