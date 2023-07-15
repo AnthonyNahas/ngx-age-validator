@@ -32,7 +32,7 @@
     "@angular/router": "~10.0.3",
     "@nguniversal/express-engine": "^10.0.1",
     "angulartics2": "^10.0.0",
-    "express": "^4.15.2",
+    "express": "^4.18.2",
     "moment": "^2.27.0",
     "ngx-markdown": "^10.0.0",
     "rxjs": "~6.5.5",
